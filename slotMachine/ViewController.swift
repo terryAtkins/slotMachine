@@ -32,6 +32,8 @@ class ViewController: UIViewController {
     var betMaxButton:  UIButton!
     var spinButton: UIButton!
     
+    var slots: [[Slot]] = []
+    
 
     let kMarginForView:CGFloat = 10.0
     let kMarginForSlots:CGFloat = 2.0
@@ -59,22 +61,27 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         
-        func resetButtonPressed(Botton: UIButton) {
-            
-        }
-        
-        func betOneButtonPressed(Botton: UIButton) {
-            
-        }
-        
-        func betMaxButtonPressed(Button: UIButton) {
-            
-        }
-        
-        func spinButtonPressed(Button: UIButton) {
-            
-        }
     }
+    
+    // IBActions
+    
+    func resetButtonPressed(Botton: UIButton) {
+        println(1)
+    }
+    
+    func betOneButtonPressed(Botton: UIButton) {
+        println(2)
+    }
+    
+    func betMaxButtonPressed(Button: UIButton) {
+        println(3)
+    }
+    
+    func spinButtonPressed(Button: UIButton) {
+        slots = Factory.createSlots()
+        self.setUpSecondContainer(self.secondContainer)
+    }
+
 
     func setUpContanierViews() {
         
