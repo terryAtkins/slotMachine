@@ -33,7 +33,7 @@ class Factory {
         
         for slot in currentCards { // for each slot in currentCards...
             currentCardValues.append(slot.value) // ...append to currentCardValue the poperty value from each slot....
-        } // ... where is slot.value getting updated from the default value of 0?
+        } // this I believe should be 0 on each loop, the value of which getting changed in the switch statement
         
         var randomNumber = Int(arc4random_uniform(UInt32(13)))
     
